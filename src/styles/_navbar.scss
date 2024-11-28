@@ -1,0 +1,20 @@
+.navbar {
+  background-color: #e4b1ab;
+  margin-bottom: 50px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    margin: 0;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+    li {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+    }
+  }
+}

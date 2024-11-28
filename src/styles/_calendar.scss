@@ -1,0 +1,123 @@
+h1 {
+  color: #053d28;
+  text-align: center;
+  font-size: 50px;
+}
+
+.calendar {
+  &-grid {
+    margin: auto;
+    width: fit-content;
+    gap: 20px;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 874px;
+    justify-content: center;
+  }
+
+  &__item {
+    border-radius: 10px;
+    background-color: #142318;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 100px;
+    color: #f9dbbd;
+    cursor: pointer;
+    transition: all .2s linear;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    perspective: 1000px;
+    position: relative;
+    height: 250px;
+    width: 250px;
+    transition: all .6s ease-in-out;
+    border-style: solid; 
+    border-image: url('../images/border-5.png') 68 / 94px stretch;
+
+    &.flipped {
+      transform: rotateY(180deg);
+
+      .calendar__item--back {
+        display: block;
+      }
+    }
+
+    &:hover { 
+      -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 50%) right / 300% 100%;
+      mask: linear-gradient(-60deg, #000 30%, #0005, #000 50%) right / 300% 100%;
+      background-repeat: no-repeat;
+      animation: shimmer 1.2s infinite;
+      scale: 1.05;
+      z-index: 2;
+
+    }
+
+    &.christmas {
+      font-weight: bold;
+      background-color: #310303;
+    }
+
+    &--front {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      background-repeat: no-repeat;
+      top: 0;
+      transform: rotateY(0); // To show the front by default
+      display: grid;
+      place-items: center;
+
+      &-title {
+        font-size: 60px;
+        text-align: center;
+        margin: 0;
+      }
+    }
+
+    &--back {
+      background-color: #053d28;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: none;
+      transform: rotateY(180deg); 
+      top: 0;
+      border-radius: 10px;
+      font-size: 30px;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &__back-content {
+      padding: 15px;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      p {
+        margin: 0;
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    -webkit-mask-position: 140% 140%;
+    mask-position: 140% 140%;
+  }
+  100% {
+    -webkit-mask-position: -20% -20%;
+    mask-position: -20% -20%;
+  }
+}

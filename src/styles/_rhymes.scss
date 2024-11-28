@@ -1,0 +1,73 @@
+.rhymes {
+  &-intro {
+    max-width: 800px;
+    margin: 30px auto;
+  }
+
+  &-inputs {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 50px auto;
+    border: 3px solid #053d28;
+    padding: 30px;
+    border-radius: 30px;
+
+    legend {
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #053d28;
+      margin-inline: 20px;
+      padding-inline: 10px;
+    }
+
+    label {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    textarea, input {
+      padding: 15px;
+      outline: none;
+      border: 2px solid #053d28;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 30px;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+
+    &__rhyme {
+      border: 2px solid #053d28;
+      background-color: #053d28;
+      color: #f9dbbd;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+}

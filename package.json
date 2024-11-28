@@ -4,15 +4,19 @@
   "private": true,
   "dependencies": {
     "@babel/eslint-parser": "^7.18.9",
-    "eslint": "^8.21.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "react": "^18.2.0",
+    "react-confetti": "^6.1.0",
+    "react-custom-roulette": "^1.4.1",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1"
+    "react-router-dom": "^6.28.0",
+    "react-scripts": "^5.0.1",
+    "react-sparkle": "^2.0.0",
+    "sass": "^1.78.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,5 +40,6 @@
   "devDependencies": {
     "eslint-plugin-flowtype": "^8.0.3",
     "react-scripts": "5.0.1"
-  }
+  },
+  "proxy": "https://jonathan.inte.fuska.qtkul.lol"
 }

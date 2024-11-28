@@ -1,0 +1,9 @@
+.score {
+  &__teams {
+    color: #053d28;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    text-align: center;
+  }
+}

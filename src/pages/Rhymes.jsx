@@ -7,7 +7,7 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 	const [rhymeName, setRhymeName] = useState('')
 	const [rhyme, setRhyme] = useState('')
 
-	const apiUrl = process.env.REACT_APP_API_URL
+	const apiUrl = process.env.REACT_APP_API_URL || 'https://jonathan.inte.fuska.qtkul.lol/api/v1'
 
 	const getAllRhymes = () => {
 		fetch(`${apiUrl}/rhymes`)

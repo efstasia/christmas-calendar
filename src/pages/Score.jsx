@@ -8,7 +8,7 @@ export const Score = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 	const [selectedTeamId, setSelectedTeamId] = useState('');
 	const [teamData, setTeamData] = useState([]);
 
-	const apiUrl = process.env.REACT_APP_API_URL
+	const apiUrl = process.env.REACT_APP_API_URL || 'https://jonathan.inte.fuska.qtkul.lol/api/v1'
 
 	const fetchTeamData = async () => {
 		try {

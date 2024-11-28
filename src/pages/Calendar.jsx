@@ -8,6 +8,9 @@ export const Calendar = () => {
   const [apiData, setApiData] = useState({});
   const [statusData, setStatusData] = useState([]);
 
+  const apiUrl = process.env.REACT_APP_API_URL || 'https://jonathan.inte.fuska.qtkul.lol/api/v1'
+
+
   const adventCalendarData = [
     { 
       id: 1, 
@@ -76,7 +79,7 @@ const handleCardClick = (id) => {
 
 const fetchDoorData = async (id) => {
     try {
-      const response = await fetch(`/api/v1/doors/${id}`);
+      const response = await fetch(`${apiUrl}/doors/${id}`);
  
       const result = await response.json();
       
@@ -92,7 +95,7 @@ const fetchDoorData = async (id) => {
 
 const fetchDoorStatus = async (id) => {
     try {
-      const response = await fetch(`/api/v1/doors`);
+      const response = await fetch(`${apiUrl}/doors`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

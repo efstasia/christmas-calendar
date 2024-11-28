@@ -12,7 +12,7 @@ export const Score = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 
 	const fetchTeamData = async () => {
 		try {
-			const response = await fetch(`/api/v1/teams`);
+			const response = await fetch(`${apiUrl}/teams`);
 			if (!response.ok) {
 				throw new Error(`HTTP error! Status: ${response.status}`);
 			}

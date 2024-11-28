@@ -56,9 +56,6 @@ export const Calendar = () => {
     },
 ];
 
-
-// Skapa en randomizer för lagen
-
 const handleCardClick = (id) => {
   const cardStatus = statusData.find((item) => item.id === id)?.status;
 
@@ -72,7 +69,7 @@ const handleCardClick = (id) => {
   
 	setFlippedCards((prev) => ({
 		...prev,
-		[id]: true, // Flip the current card
+		[id]: true, // Flip the current card.
 	}));
 
 };
@@ -101,7 +98,7 @@ const fetchDoorStatus = async (id) => {
       }
       const result = await response.json();
       
-      // Updates the state to store the data for the specific card id
+      // Updates the state to store the data for the specific card id.
       setStatusData(result.data);
     } catch (error) {
       console.error("Fetch error:", error);
@@ -113,7 +110,6 @@ useEffect(() => {
   adventCalendarData.map(door => fetchDoorData(door.id))
   fetchDoorStatus()
 }, [])
-
  
   return (
     <div className='calendar'>

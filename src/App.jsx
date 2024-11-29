@@ -7,9 +7,9 @@ import { Home } from 'pages/Home';
 import { Rhymes } from 'pages/Rhymes';
 import { Navbar } from 'components/Navbar';
 import { Score } from 'pages/Score';
-import { EasterEgg } from 'components/EasterEgg';
 import bgImage from './images/christmas-bcg1.png'
 import { TeamPicker } from 'pages/TeamPicker';
+import { Footer } from 'components/Footer';
 
 
 export const App = () => {
@@ -40,6 +40,7 @@ export const App = () => {
 			< Route exact path='/team' Component={TeamPicker} />
 		</Routes>
 		</main>
+    < Footer />
 		</BrowserRouter>
 	)
 }

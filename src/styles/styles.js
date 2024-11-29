@@ -5,3 +5,4 @@ import './_rhymes.scss';
 import './_teams.scss';
 import './_homepage.scss';
 import './_team-picker.scss';
+import './_footer.scss';

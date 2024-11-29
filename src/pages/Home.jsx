@@ -65,7 +65,7 @@ export const Home = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
       <button onClick={() => handleOpeningCeremony()} className="btn btn--ribbon">
         <span className={`split ${showSplit ? 'split--show' : ''} ` }>QTCC</span> <span>2024</span>
         </button>
-        {showSplit && <h3 className="homepage__countdown">{counter}</h3>}
+        {showSplit && <h3 className="homepage__countdown">{counter > 0 ? counter : 'NU KÖR VI!'}</h3>}
       </>
     
     </div>

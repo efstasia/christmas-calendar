@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #e4b1ab;
+  background-color: #310303;
   margin-bottom: 50px;
 
   &__list {
@@ -15,6 +15,24 @@
       font-size: 20px;
       font-weight: bold;
       letter-spacing: 1.2px;
+      transition: all .3s ease-in-out;
+
+      a {
+        color: #e4b1ab;
+        transition: all .3s ease-in-out;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        letter-spacing: 2.5px;
+      }
+
+      &:hover {
+        transform: scale(1.04);
+        a {
+          color: #f9dbbd;
+        }
+      }
+    
+
     }
   }
 }

@@ -7,6 +7,8 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 	const [rhymeName, setRhymeName] = useState('')
 	const [rhyme, setRhyme] = useState('')
 
+  let rhymeNumber = 1
+
 	const apiUrl = process.env.REACT_APP_API_URL || 'https://jonathan.inte.fuska.qtkul.lol/api/v1'
 
 	const getAllRhymes = () => {
@@ -56,8 +58,9 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 			<div className="rhymes-container">
 				{allRhymes.map((rhyme, index ) => (
           <div className="rhymes-container__rhyme" key={rhyme.id}>
+            <p className="rhymes__number">{rhymeNumber++}</p>
             <h2>{rhyme.name}</h2>
-            <p>{rhyme.rhyme}</p>
+            <p className="rhymes-container__text">{rhyme.rhyme}</p>
           </div>
         ))}
 			</div>

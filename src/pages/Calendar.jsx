@@ -12,52 +12,16 @@ export const Calendar = () => {
 
 
   const adventCalendarData = [
-    { 
-      id: 1, 
-      christmas: false, 
-      title: '1', 
-    },
-    { 
-      id: 5, 
-      christmas: false, 
-      title: '5',  
-    },
-    { 
-      id: 8, 
-      christmas: false, 
-      title: '8', 
-    },
-    { 
-      id: 7, 
-      christmas: false, 
-      title: '7', 
-    },
-    { 
-      id: 6, 
-      christmas: false, 
-      title: '6', 
-    },
-    { 
-      id: 4, 
-      christmas: false, 
-      title: '4', 
-    },
-    { 
-      id: 9, 
-      christmas: true, 
-      title: '9', 
-    },
-    { 
-      id: 3, 
-      christmas: false, 
-      title: '3', 
-    },
-    { 
-      id: 2, 
-      christmas: false, 
-      title: '2',  
-    },
-];
+    { id: 1, christmas: false, title: '1' },
+    { id: 5, christmas: false, title: '5' },
+    { id: 8, christmas: false, title: '8' },
+    { id: 7, christmas: false, title: '7' },
+    { id: 6, christmas: false, title: '6' },
+    { id: 4, christmas: false, title: '4' },
+    { id: 9, christmas: true, title: '9' },
+    { id: 3, christmas: false, title: '3' },
+    { id: 2, christmas: false, title: '2' },
+  ];
 
 const handleCardClick = (id) => {
   const cardStatus = statusData.find((item) => item.id === id)?.status;
@@ -68,7 +32,7 @@ const handleCardClick = (id) => {
   if (cardStatus !== 'open') {
     console.log(`Card ${id} is closed and cannot be flipped.`);
     return;
-  }
+  } 
   
 	setFlippedCards((prev) => ({
 		...prev,
@@ -80,7 +44,7 @@ const handleCardClick = (id) => {
 const fetchDoorData = async (id) => {
     try {
       const response = await fetch(`${apiUrl}/doors/${id}`);
- 
+
       const result = await response.json();
       
       // Updates the state to store the data for the specific card id.
@@ -103,21 +67,22 @@ const fetchDoorStatus = async (id) => {
       
       // Updates the state to store the data for the specific card id.
       setStatusData(result.data);
+
     } catch (error) {
       console.error("Fetch error:", error);
     }
   };
 
 
-useEffect(() => {
-  adventCalendarData.map(door => fetchDoorData(door.id))
-  fetchDoorStatus()
-}, [])
- 
+  useEffect(() => {
+    adventCalendarData.map(door => fetchDoorData(door.id))
+    fetchDoorStatus()
+  }, [])
+
   return (
     <div className='calendar'>
       <Sparkles flicker={false} minSize={12} count={100} />
-      <div className='calendar-grid'>
+      <div className='calendar-grid pink-background'>
         {adventCalendarData.map(event => (
           <div
             key={event.id}
@@ -130,7 +95,9 @@ useEffect(() => {
             <div className='calendar__item--back' style={{backgroundImage: `url(${backgroundImage})`}}>
               <div className='calendar__item__back-content'>
                 <p>Idag: {apiData[event.id] ? apiData[event.id].content.now : ''}</p>
-                <p>Imorgon: {apiData[event.id] ? apiData[event.id].content.tomorrow : ''}</p>
+                {!event.christmas && (
+                  <p>Imorgon: {apiData[event.id] ? apiData[event.id].content.tomorrow : ''}</p>
+                )} 
               </div>
             </div>
           </div>

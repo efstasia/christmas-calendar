@@ -12,7 +12,6 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 
 	function getDate() {
 		const currDate = new Date().toLocaleDateString();
-		console.log("🚀 ~ getDate ~ currDate:", currDate)
 		const currTime = new Date().toLocaleTimeString();
 
 		if (currDate === '03/12/2024' && currTime > '13') {

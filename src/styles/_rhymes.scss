@@ -4,6 +4,26 @@
     margin: 30px auto;
   }
 
+  h3 {
+    margin-top: 15px;
+  }
+
+  ul {
+    margin-top: 10px;
+
+    li {
+      margin-bottom: 5px;
+
+      &::before {
+        content: url('../images/list-bullet-2.svg');
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 6px;
+      }
+    }
+  }
+
   &-inputs {
     display: flex;
     flex-direction: column;

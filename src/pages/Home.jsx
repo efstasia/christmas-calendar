@@ -34,7 +34,7 @@ export const Home = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
           setIsGrandOpening(true); // Triggers the confetti.
           setTimeout(() => {
             window.location.assign('/calendar')
-          }, 20000)
+          }, 10000)
           return 0;
 
         }

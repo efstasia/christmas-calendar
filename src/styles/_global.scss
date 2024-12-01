@@ -27,7 +27,13 @@ main {
 }
 
 .red-background {
-  background-color: #31030386;
+  background-color: #310303dc;
+  max-width: 800px;
+  text-align: center;
+
+  p {
+    color: #f9dbbd;
+  }
 }
   
 h1, h2, h3, h4, h5, h6, p, span {
@@ -171,12 +177,13 @@ fieldset {
   flex-direction: column;
   max-width: 700px;
   margin: 50px auto;
-  border: 3px solid #053d28;
-  padding: 30px;
+  border: 5px solid #053d28;
+  padding: 20px;
   border-radius: 30px;
+  background-color: #e4b1ab;
 
   legend {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
     color: #053d28;
@@ -186,7 +193,7 @@ fieldset {
 }
 
 label {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 8px;
 }
 
@@ -196,7 +203,7 @@ textarea, input, select {
   border: 2px solid #053d28;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 13px;
   margin-bottom: 15px;
 }
 

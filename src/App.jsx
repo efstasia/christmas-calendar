@@ -37,7 +37,7 @@ export const App = () => {
 			< Route exact path='/rhymes'  element={<Rhymes onHandleClick={handleClick} showEasterEgg={showEasterEgg} setShowEasterEgg={setShowEasterEgg}/>} 
 />
 			< Route exact path='/score' element={<Score onHandleClick={handleClick} showEasterEgg={showEasterEgg}  setShowEasterEgg={setShowEasterEgg}/>} />
-			< Route exact path='/team' Component={TeamPicker} />
+			< Route exact path='/team' element={<TeamPicker onHandleClick={handleClick} showEasterEgg={showEasterEgg} setShowEasterEgg={setShowEasterEgg}/>}/>
 		</Routes>
 		</main>
     < Footer />

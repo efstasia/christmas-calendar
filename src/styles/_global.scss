@@ -111,16 +111,16 @@ button {
 
   &--home {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    right: 30px;
-    top: 500px;
+    width: 10px;
+    height: 10px;
+    left: 500px;
+    top: 10px;
   }
 
   &--score {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 15px;
+    height: 15px;
     left: 600px;
     top: 600px;
   }
@@ -130,7 +130,7 @@ button {
     font-size: 50px;
     margin-block: 50px;
     filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
-    cursor: url('../images/scissor2.png'), auto;
+    cursor: auto;
 
     &:hover {
       background-color: #053d28;

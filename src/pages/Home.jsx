@@ -12,7 +12,7 @@ export const Home = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
   const [grandOpening, setIsGrandOpening] = useState(false)
   const [counter, setCounter] = useState(5)
   const [showSplit, setShowSplit] = useState(false)
- 
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -51,8 +51,6 @@ export const Home = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
       {showSplit && (
         <h1>Quality Think Christmas Contest 2024</h1>
       )}
-      <button className='btn--home' onClick={onHandleClick}></button>
-		  < EasterEgg showEasterEgg={showEasterEgg} />
       {grandOpening && (
         <Confetti
         width={width}
@@ -62,9 +60,9 @@ export const Home = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
       />
       )}
       <>
-      <button onClick={() => handleOpeningCeremony()} className="btn btn--ribbon">
-        <span className={`split ${showSplit ? 'split--show' : ''} ` }>QTCC</span> <span>2024</span>
-        </button>
+      <button className="btn btn--ribbon">
+        QTCC 2024
+      </button>
         {showSplit && <h3 className="homepage__countdown">{counter > 0 ? counter : 'NU KÖR VI!'}</h3>}
       </>
     

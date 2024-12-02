@@ -23,6 +23,16 @@ export const Score = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 		}
 	};
 
+  let clickCount = 0;
+
+  const handleSecretClicks = () => {
+    clickCount++;
+    if (clickCount === 5) {
+      setShowEasterEgg(true);
+    }
+  };
+
+
 	const handleScorePatch = (event) => {
 		event.preventDefault();
 			fetch(`${apiUrl}/teams/score/${selectedTeamId}`, {
@@ -56,7 +66,7 @@ export const Score = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 				<span>Poäng: {data.score}</span>
 				<h3>Medlemmar</h3>
 				{data.players?.map((player, index) => (
-					<div key={player.index}>
+					<div key={index}>
 						<p>{player}</p>
 					</div>
 				))}
@@ -101,7 +111,7 @@ export const Score = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 			<input className="btn" type="submit" value="Uppdatera poäng" />
 		</form>
 		</fieldset>
-		<button  className="btn--score" onClick={onHandleClick}></button>
+		<button  className="btn--score" tabIndex={-1} onClick={handleSecretClicks}></button>
 	</div>
 
 	)

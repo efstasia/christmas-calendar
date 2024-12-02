@@ -1,11 +1,13 @@
 /* eslint-disable */
-import React, { useState } from "react";
+import { EasterEgg } from "components/EasterEgg";
+import React, { useEffect, useState } from "react";
 import { Wheel } from 'react-custom-roulette'
 
-export const TeamPicker = () => {
+export const TeamPicker = ({showEasterEgg, setShowEasterEgg}) => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
 
+  let clickCount = 0;
 
   const wheelData = [
     { option: 'Jonathan', style: { backgroundColor: '#310303', textColor: '#e4b1ab' } },
@@ -22,8 +24,20 @@ export const TeamPicker = () => {
     }
   }
 
+  const handleSecretClicks = () => {
+    clickCount++;
+    if (clickCount === 8) {
+      setShowEasterEgg(true);
+    }
+  };
+
+  useEffect(() => {
+    setShowEasterEgg(false)
+  }, [])
+
   return (
     <div className="pink-background team-picker">
+		  < EasterEgg showEasterEgg={showEasterEgg} />
        <Wheel
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
@@ -40,7 +54,8 @@ export const TeamPicker = () => {
         }}
       />
       <button className="btn" onClick={handleSpinClick}>SPIN</button>
-      <h2>{wheelData.option}</h2>
+      <button className='btn--home' tabIndex={-1} onClick={handleSecretClicks}></button>
+
     </div>
     
   )

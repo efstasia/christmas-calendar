@@ -14,7 +14,7 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 		const currDate = new Date().toLocaleDateString();
 		const currTime = new Date().toLocaleTimeString();
 
-		if (currDate === '03/12/2024' && (currTime > '13' || currTime > '1')) {
+		if (currDate === '03/12/2024' && (currTime > '12' || currTime > '1')) {
 			setCanViewRhymes(true)
 		}
 	}

@@ -6,7 +6,7 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 	const [allRhymes, setAllRhymes] = useState([])
 	const [rhymeName, setRhymeName] = useState('')
 	const [rhyme, setRhyme] = useState('')
-	const [canViewRhymes, setCanViewRhymes] = useState(false)
+	const [canViewRhymes, setCanViewRhymes] = useState(true)
 
 	let rhymeNumber = 1
 

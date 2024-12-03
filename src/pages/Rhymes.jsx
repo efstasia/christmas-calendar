@@ -69,7 +69,7 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 						<li>Tiden för att skicka in ditt rim är från <strong>tisdag 3/12 kl. 13:00</strong> till <strong>onsdag 4/12 kl. 13:00</strong>.</li>
 						<li>Varje person får <strong>en röst</strong> att lägga på sitt favoritrim.</li>
 						<li>Personen som skrivit rimmet kammar hem <strong>ett poäng</strong> per röst till sitt lag.</li>
-						<li>Laget vars medlem skrivit det vinnande rimmet kammar hem <strong>ytterligare 5 poäng.</strong></li>
+						<li>Laget vars medlem skrivit det vinnande rimmet kammar hem <strong>ytterligare 10 poäng.</strong></li>
 						<li>Röstningen sker <strong>från och med onsdagen den 4/12 kl. 13:15 till <strong>torsdagen den 5/12 kl. 08:59</strong> då tävlingen avgörs och vinnarna presenteras.</strong></li>
 					</ul>
 				</div>

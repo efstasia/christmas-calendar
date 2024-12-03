@@ -35,9 +35,11 @@ export const TeamPicker = ({showEasterEgg, setShowEasterEgg}) => {
     setShowEasterEgg(false)
   }, [])
 
+  const number = 3;
+
   return (
     <div className="pink-background team-picker">
-		  < EasterEgg showEasterEgg={showEasterEgg} />
+		  < EasterEgg showEasterEgg={showEasterEgg} number={number}/>
        <Wheel
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}

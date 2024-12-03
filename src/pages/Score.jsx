@@ -56,9 +56,11 @@ export const Score = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 	setShowEasterEgg(false)
 }, [])
 
+const number = 1;
+
 	return (
 		<div className="score pink-background">
-			  < EasterEgg showEasterEgg={showEasterEgg} />
+			  < EasterEgg showEasterEgg={showEasterEgg} number={number}/>
 			<div className='score__teams'>
 		{teamData.map(data => (
 			<div  key={data.id}>

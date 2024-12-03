@@ -53,6 +53,8 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 		getDate()
 	}, [])
 
+  const number = 2;
+
 	return (
 		<div className="rhymes">
 		{canViewRhymes ? (
@@ -71,7 +73,7 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 						<li>Röstningen sker <strong>från och med onsdagen den 4/12 kl. 13:15 till <strong>torsdagen den 5/12 kl. 08:59</strong> då tävlingen avgörs och vinnarna presenteras.</strong></li>
 					</ul>
 				</div>
-					< EasterEgg showEasterEgg={showEasterEgg} />
+					< EasterEgg showEasterEgg={showEasterEgg} number={number}/>
 					<fieldset className="rhymes-input">
 						<legend>Busta rhyme</legend>
 						<label htmlFor="name">1. Ge rimmet ett namn</label>

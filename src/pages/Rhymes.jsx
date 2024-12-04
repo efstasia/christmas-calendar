@@ -59,7 +59,7 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 		<div className="rhymes">
 		{canViewRhymes ? (
 			<div className="rhymes pink-background">
-					<div className="rhymes-intro"><p>HO HO <button tabIndex={-1}  onClick={onHandleClick}>HO</button> kära julvänner! ✨ Vad vore julen utan rim som kittlar både hjärtan och skrattmuskler? Här i tomteverkstan, mitt bland glittrande kulor och pepparkaksdoft, klapprar vi ner små rim som landar mjukare än nyfallen snö på taknocken.
+					{/* <div className="rhymes-intro"><p>HO HO <button tabIndex={-1}  onClick={onHandleClick}>HO</button> kära julvänner! ✨ Vad vore julen utan rim som kittlar både hjärtan och skrattmuskler? Här i tomteverkstan, mitt bland glittrande kulor och pepparkaksdoft, klapprar vi ner små rim som landar mjukare än nyfallen snö på taknocken.
 					Så hämta en rykande kopp glögg (eller kanske två!), sätt dig bekvämt och låt fantasin flyga högt som tomtens renar en frostig natt. För nu är det dags att rimma så det slår gnistor om granen!
 					</p>
 					<h3>Regler</h3>
@@ -72,16 +72,16 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 						<li>Laget vars medlem skrivit det vinnande rimmet kammar hem <strong>ytterligare 10 poäng.</strong></li>
 						<li>Röstningen sker <strong>från och med onsdagen den 4/12 kl. 13:15 till <strong>torsdagen den 5/12 kl. 08:59</strong> då tävlingen avgörs och vinnarna presenteras.</strong></li>
 					</ul>
-				</div>
+				</div> */}
 					< EasterEgg showEasterEgg={showEasterEgg} number={number}/>
-					<fieldset className="rhymes-input">
+					{/* <fieldset className="rhymes-input">
 						<legend>Busta rhyme</legend>
 						<label htmlFor="name">1. Ge rimmet ett namn</label>
 							<input onChange={(e) => setRhymeName(e.target.value)} name="rhyme-name" id="rhyme-name"value={rhymeName} type="text" placeholder="T.ex. 'Sagoskogen'" />
 						<label htmlFor="rhyme">2. Skriv ditt rim här </label>
 						<textarea onChange={(e) => setRhyme(e.target.value)}  value={rhyme} name="rhyme" id="rhyme" cols="50" rows="10" placeholder="T.ex. jul är kul"></textarea>
 						<button className="btn" onClick={handleRhymeSubmit}>Skicka in</button>
-					</fieldset>
+					</fieldset> */}
 
 					<div className="rhymes-container">
 						{allRhymes.map((rhyme, index ) => (

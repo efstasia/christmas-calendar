@@ -23,6 +23,12 @@ export const BonusPoints = () => {
             <li>⭐️ Julstjärnorna: <strong>2</strong> ledda möten</li>
           </ul>
         </li>
+        <li className="bonus-points__list-parent">✨<strong>Grattis</strong> laget där medlemmerna individuellt har vunnit flest tävlingar<strong>Julstjärnorna </strong>✨
+          <ul>
+            <li>⛄️ Snögubbarna: <strong>2 </strong>individuella vinster</li>
+            <li>⭐️ Julstjärnorna: <strong>4</strong> individuella vinster</li>
+          </ul>
+        </li>
       </ul>
     </div>
   );

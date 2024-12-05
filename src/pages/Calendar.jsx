@@ -95,7 +95,7 @@ const fetchDoorStatus = async (id) => {
             <div className='calendar__item--back' style={{backgroundImage: `url(${backgroundImage})`}}>
               <div className='calendar__item__back-content'>
                 <p>Idag: {apiData[event.id] ? apiData[event.id].content.now : ''}</p>
-                {!event.christmas || event.id !== 5 && (
+                {apiData[event.id]?.content?.tomorrow && (
                   <p>Imorgon: {apiData[event.id] ? apiData[event.id].content.tomorrow : ''}</p>
                 )} 
               </div>

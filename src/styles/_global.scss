@@ -113,16 +113,20 @@ button {
     position: absolute;
     width: 10px;
     height: 10px;
-    left: 500px;
-    top: 10px;
+    left: 25px;
+    top: 800px;
   }
 
   &--score {
     position: absolute;
     width: 15px;
     height: 15px;
-    left: 600px;
-    top: 600px;
+    left: 65%;
+    top: 744px;
+  }
+
+  &--custom {
+    cursor: url('../images/bow3.png'), auto;
   }
 
   &--ribbon {

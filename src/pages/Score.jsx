@@ -113,7 +113,7 @@ const number = 1;
 			<input className="btn" type="submit" value="Uppdatera poäng" />
 		</form>
 		</fieldset>
-		<button  className="btn--score" tabIndex={-1} onClick={handleSecretClicks}></button>
+		<button  className="btn--score btn--custom" tabIndex={-1} onClick={handleSecretClicks}></button>
 	</div>
 
 	)

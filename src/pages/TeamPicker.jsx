@@ -56,7 +56,7 @@ export const TeamPicker = ({showEasterEgg, setShowEasterEgg}) => {
         }}
       />
       <button className="btn" onClick={handleSpinClick}>SPIN</button>
-      <button className='btn--home' tabIndex={-1} onClick={handleSecretClicks}></button>
+      <button className='btn--home btn--custom' tabIndex={-1} onClick={handleSecretClicks}></button>
 
     </div>
     

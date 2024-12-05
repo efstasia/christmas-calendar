@@ -59,9 +59,11 @@ export const Rhymes = ({onHandleClick, showEasterEgg, setShowEasterEgg}) => {
 		<div className="rhymes">
 		{canViewRhymes ? (
 			<div className="rhymes pink-background">
-					{/* <div className="rhymes-intro"><p>HO HO <button tabIndex={-1}  onClick={onHandleClick}>HO</button> kära julvänner! ✨ Vad vore julen utan rim som kittlar både hjärtan och skrattmuskler? Här i tomteverkstan, mitt bland glittrande kulor och pepparkaksdoft, klapprar vi ner små rim som landar mjukare än nyfallen snö på taknocken.
+        <div className="rhymes-intro"><p>HO HO <button className="btn--custom" tabIndex={-1}  onClick={onHandleClick}>HO</button> kära julvänner! ✨ Vad vore julen utan rim som kittlar både hjärtan och skrattmuskler? Här i tomteverkstan, mitt bland glittrande kulor och pepparkaksdoft, klapprar vi ner små rim som landar mjukare än nyfallen snö på taknocken.
 					Så hämta en rykande kopp glögg (eller kanske två!), sätt dig bekvämt och låt fantasin flyga högt som tomtens renar en frostig natt. För nu är det dags att rimma så det slår gnistor om granen!
 					</p>
+          </div>
+					{/* 
 					<h3>Regler</h3>
 					<ul>
 						<li>Varje person får skicka in <strong>ett</strong> rim.</li>

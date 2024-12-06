@@ -94,10 +94,10 @@ const fetchDoorStatus = async (id) => {
             </div>
             <div className='calendar__item--back' style={{backgroundImage: `url(${backgroundImage})`}}>
               <div className='calendar__item__back-content'>
-                <p>Idag: {apiData[event.id] ? apiData[event.id].content.now : ''}</p>
                 {apiData[event.id]?.content?.tomorrow && (
-                  <p>Imorgon: {apiData[event.id] ? apiData[event.id].content.tomorrow : ''}</p>
+                  <p>Idag: {apiData[event.id] ? apiData[event.id].content.tomorrow : ''}</p>
                 )} 
+                <p>Bonus: {apiData[event.id] ? apiData[event.id].content.now : ''}</p>
               </div>
             </div>
           </div>
